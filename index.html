@@ -1,0 +1,313 @@
+<!-- 
+    1.position
+    2. transform
+    3. +pseudo3d: parallax
+    4. +scss
+    5. animations
+ -->
+
+ <!-- 
+     *HW1: improvize 
+     -Finish navbar - add brand 
+     -Reviews - add carousel for reviews 
+     -Apply - add packages - standard/econom/types packages
+     - Create form in apply
+     -*make it a bit - responsive/adaptive
+
+  -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Winter SCSS and Parallax</title>
+     <link rel="stylesheet" href="snow.css">
+     <link rel="stylesheet" href="para.css">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="sections.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+ </head>
+ <body>
+     <nav class="navbar">
+        
+        <ul> 
+             <li><a href="#presentation" id="logo">
+                 
+                 <img src="images/logo.png" alt="">
+                </a></li>
+             <li class="main"><a href="#presentation">White Snow Tour</a></li>
+             <li class="main"><a href="#reviews">Experience</a></li>
+             <li class="main"><a href="#apply">Take the tour</a></li>
+             <li class="main"><a href="#">Shop</a></li>
+             <li class="main"><a href="#">Team</a></li>
+             <li class="main"><a href="#">About Us</a></li>
+             <li class="burger-menu">
+                <label for="toggle">  
+                     <i class="fas fa-bars"></i>
+                </label>
+            </li>
+
+        </ul>
+        <input type="checkbox" id="toggle"> 
+     </nav>
+    
+  
+  
+     <div class="parallax-container">
+
+           <section id="presentation" class="section">
+                <h1>Get the best out of your next winter tour! </h1>
+                <!-- <img src="images/snow-boarder-1335696_1280.png" alt=""> -->
+                
+                <span><a href="">Take the Tour!</a></span>
+                <span><a href="">Contact Us</a></span>
+                
+                
+            </section>
+        
+            <section id="reviews" class="section">
+                <h1>REVIEWS</h1>
+
+                <div class="autoplay">
+                    <div class="review-container">
+                       <p>★★★</p>
+                       <p>
+                        "Heather was a fantastic guide. It was truly an amazing experience and highly recommend to any experienced hiker.
+                        Tougher than I expected, but more spectacularly beautiful. Glad I did it!!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iusto porro adipisci non aperiam ratione! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, mollitia animi nam blanditiis asperiores nesciunt?
+                        "
+                       </p>
+                       <h4>@amandawheeler, Experienced Hiker</h3>
+                       
+                    </div>
+                    <div class="review-container">
+                        <p>★★★★★</p>
+                        <p>"The trip was awesomely organized from "head to toes"! The scenery perfect and idyllic, especially during the evenings! Our guesthouses were exactly what we needed at the end of every day, the logistics of the trip flawless and everybody (especially our guide Anna) made us feel welcomed and comfortable during the whole trip! We had never tasted so delicious food before and in general i can say with ease that this was one of the best trips we've had so far in Europe!"
+                        </p>
+                        <h4>@jason_smith, Humble Tourist</h4>
+                    </div>
+                    <div class="review-container">
+                        <p>★★★★★</p>
+                        <p>"Peter smith was the key he was a great guide but also just a great person he was extremely helpful at all times. And his have us carry the picnic lunches and then preparing them on the trail was a great idea all guides should do this we all carried some part of the lunch then we prepared it as a group each day we all enjoyed this immensely.
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium harum cum ipsum voluptatem quasi unde aperiam necessitatibus adipisci inventore.
+                      "</p>
+                        <h4>@bankscody, Traveler</h4>
+                        
+                    </div>
+                  </div>
+
+            </section>
+
+            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+             
+            <script>
+               $('.autoplay').slick({
+                 slidesToShow: 1,
+                 slidesToScroll: 1,
+                 autoplay: true,
+                 autoplaySpeed: 5000,
+               });
+              </script>
+
+            <section id="apply" class="section" >
+                <h1>APPLY</h1>
+                <div class="offer">
+                    <article class="package standard">
+                        <figure><img src="images/hiking-mountain.jpg" alt=""></figure>
+                        <h2>Standard Hiking</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius provident incidunt iste perspiciatis tempora odio, ad doloribus quas accusamus? Consequatur mollitia eaque amet sequi, officia porro dignissimos iste necessitatibus eveniet. Consequuntur a, earum veniam dolores fugit amet odit quae sequi.
+                            <a href="#">trip details...</a>
+                        </p>
+
+                    </article>
+                    <article class="package short-term">
+                        <figure><img src="images/summer-hiking.jpg" alt=""></figure>
+                        <h2>Quick Adventure</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptate quas odio ipsa libero vero, expedita natus vitae recusandae dolorum minus aperiam architecto id eos eius a dignissimos voluptatum illo repellat magni, possimus quod. Veniam natus magni quisquam sed. Voluptas quasi itaque et harum sequi.
+                            <a href="#">trip details...</a>
+                        </p>
+
+                    </article>
+                    <article class="package extreme">
+                        <figure><img src="images/extreme-hiking.jpg" alt=""></figure>
+                        <h2>Extreme Hiking Adventure</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia odit inventore consequatur quas molestias incidunt rem commodi beatae placeat repellat hic autem libero assumenda cupiditate aspernatur veniam dolorem, cum blanditiis a optio sapiente itaque laboriosam ab eveniet! Eaque, rerum similique.
+                            <a href="#">trip details...</a>
+                        </p>
+                    </article>
+                    
+             </div>
+                
+               <p class="signup"><a href="#form">SIGN UP!</a> </p>
+                
+              <div id="form" class="form">
+                    <h2>Take the Tour! Take it!</h2>
+                    <form action=""> 
+                        <label for="name">
+                            <input type="text" placeholder="full name" required id="name">
+                        </label> <br>
+                        <label for="phone"> 
+                            <input type="tel" placeholder="phone: +12345678" required id="phone">
+                        </label> <br>
+                        <label for="email"> 
+                            <input type="text" placeholder="email: john.doe@email.com" id="email">
+                        </label> <br>
+
+                        <label for="package"> 
+                            <select name="package" id="package" required>
+                                <option value="">--Package--</option>
+                                <option value="standard-hik">Standard Hiking</option>
+                                <option value="quick-hik">Quick Adventure</option>
+                                <option value="extreme">Extreme Hiking Adventure</option>
+                            </select> 
+                       </label> <br>
+
+                       <label for="age"> 
+                        <input type="age" placeholder="age: 25 years old" required id="age">
+                    </label> <br>
+
+                    <label for="birthday">
+                      <input type="date" id="birthday" name="birthday">
+                   </label> <br>
+
+                  <label for="story"></label>
+
+                    <textarea id="details" name="details"
+                              >
+                    Additional details...
+                    </textarea>  <br>
+
+                  <button>SEND</button>
+
+                    </form>
+                </div>
+                
+            </section>
+
+        
+
+            <div class="flake-layer">
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+                <div class="flake"></div>
+            </div>
+
+   
+            <div class="layer layer-1 tree-left"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3"></div>
+            <div class="layer layer-4">
+                <div class="polar-bear">
+                    
+                </div>
+            </div>
+            <div class="layer layer-5 bg-mountains"></div>
+     </div>
+
+     
+     
+ </body>
+ </html>

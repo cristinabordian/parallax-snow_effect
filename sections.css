@@ -1,0 +1,322 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: -3vh;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: 1000;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+}
+
+.navbar #toggle {
+  display: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar ul li {
+  padding: .25em;
+}
+
+.navbar ul li img {
+  width: 15vw;
+  height: 15vh;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .burger-menu {
+  color: white;
+  display: none;
+}
+
+.section {
+  height: 95vh;
+  width: auto;
+  color: white;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section > * {
+  position: relative;
+  z-index: 999;
+}
+
+.section h1 {
+  height: 55vh;
+  font-size: 15vh;
+  text-align: right;
+  margin-top: 15vh;
+  padding: 0;
+  margin-bottom: 0;
+  background: url(images/snow-boarders.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: contrast(250%);
+          filter: contrast(250%);
+}
+
+.section#presentation {
+  height: 90vh;
+}
+
+.section#presentation span {
+  display: inline-block;
+  width: 7em;
+  height: 2em;
+  border-radius: .5em;
+  line-height: 2em;
+  text-align: center;
+  background-color: #111;
+  position: relative;
+  left: 55vw;
+  bottom: -15vh;
+}
+
+.section#presentation span a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.section#reviews .autoplay {
+  width: 90vw;
+  position: relative;
+  bottom: 10vh;
+  right: -2vw;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+.section#reviews .review-container p {
+  text-align: center;
+  color: black;
+}
+
+.section#reviews .autoplay h4 {
+  color: rgba(243, 12, 12, 0.877);
+  text-align: center;
+}
+
+.section#apply .offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  top: -25vh;
+  color: black;
+}
+
+.section#apply .package {
+  margin: 1vw;
+  text-align: center !important;
+  background-color: rgba(255, 255, 255, 0.747);
+}
+
+.section#apply .package figure {
+  padding: 0;
+}
+
+.section#apply .package img {
+  width: 20vw;
+}
+
+.section#apply .package a {
+  text-decoration: none;
+}
+
+.section#apply .package:hover {
+  background-color: #fff;
+}
+
+.section#apply .signup {
+  display: block;
+  margin-left: 40%;
+  position: relative;
+  top: -15vh;
+  width: 15em;
+  height: 2.5em;
+  background: -webkit-gradient(linear, left bottom, right top, from(black), to(blue));
+  background: linear-gradient(to top right, black, blue);
+  text-align: center;
+  border-radius: .5em;
+}
+
+.section#apply .signup a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+
+.section#apply .signup:hover {
+  border: 1px solid rgba(255, 255, 255, 0.637);
+  border-radius: 2px;
+}
+
+.section#apply #form {
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 0.452);
+  text-align: center;
+  display: none;
+}
+
+.section#apply #form h2 {
+  padding-top: 3em;
+  color: black;
+}
+
+.section#apply #form:target {
+  display: block;
+  margin-top: 5vh;
+  margin-left: 2.5vw;
+  height: 100vh;
+}
+
+.section#apply #form input, .section#apply select, .section#apply button {
+  width: 30vw;
+  padding: .25em;
+  margin: .5em;
+  -webkit-box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: 1.25em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  border-bottom: 3px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  font-family: Arial;
+}
+
+.section#apply #form input:hover, .section#apply select:hover, .section#apply button:hover {
+  background-color: white;
+}
+
+.section#apply #form input::-webkit-input-placeholder, .section#apply select::-webkit-input-placeholder, .section#apply button::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+  font-family: Arial;
+}
+
+.section#apply #form input:-ms-input-placeholder, .section#apply select:-ms-input-placeholder, .section#apply button:-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+  font-family: Arial;
+}
+
+.section#apply #form input::-ms-input-placeholder, .section#apply select::-ms-input-placeholder, .section#apply button::-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+  font-family: Arial;
+}
+
+.section#apply #form input::placeholder, .section#apply select::placeholder, .section#apply button::placeholder {
+  color: black;
+  opacity: 1;
+  font-family: Arial;
+}
+
+.section#apply #form textarea {
+  width: 30vw;
+  padding: .25em;
+  margin: .5em;
+  -webkit-box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: 1.25em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  border-bottom: 3px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  text-align: left;
+  font-family: Arial;
+}
+
+@media (max-width: 880px) {
+  .section h1 {
+    font-size: 13vh;
+    margin-top: 20vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .navbar .main {
+    display: none;
+  }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1em;
+  }
+  .navbar .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar input[type=checkbox]:checked ~ ul li.main {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 50vh;
+  }
+  #presentation span {
+    bottom: -5vh;
+  }
+  #apply .offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70vw;
+    left: 15vw;
+  }
+  #apply .offer .package {
+    width: 70vw;
+  }
+  #apply .offer .package img {
+    width: 55vw;
+  }
+  #apply form {
+    font-size: .75em;
+  }
+}
+/*# sourceMappingURL=sections.css.map */

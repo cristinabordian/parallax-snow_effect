@@ -1,0 +1,26 @@
+.bg-mountains {
+    // background-image: url(images/mountains-1112911_1920.jpg);
+    // background-image: url(images/mountain-cover.jpg);
+    background-image: url(images/snowboard-113939_1920.jpg);
+    background-size: cover;
+    filter: brightness(130%)
+}
+
+.tree-left {
+    background-image: url(images/christmas-tree.png);
+    background-repeat: no-repeat;
+    background-position: -370px 0;
+    filter: brightness(50%);
+}
+
+.polar-bear {
+    width: 90px;
+    height: 90px;
+    background-image: url(images/Snow-Bear-Transparent-PNG.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    filter: brightness(130%);
+}

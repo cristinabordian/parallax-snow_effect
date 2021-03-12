@@ -1,0 +1,375 @@
+:root {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0;
+    
+}
+
+.navbar {
+    position: fixed;
+    top: -3vh;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    z-index: 1000;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: black;
+   
+    #toggle {
+        display: none;
+        
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        li {
+            // border: 1px solid darkred;
+            padding: .25em;
+            
+            img {
+                width: 15vw;
+                height: 15vh;
+                
+                // position:relative;
+            }
+        }
+    }
+
+   a {
+      text-decoration: none;
+      color: white;
+    }
+
+   
+
+    .burger-menu {
+        color: white;
+        display: none;
+    }
+}
+
+.section {
+    height: 95vh;
+    width: auto;
+   
+    // border: 5px solid red;
+    // text-align: right;
+    color: white;
+    padding: 5%;
+    box-sizing: border-box;
+
+    > * {
+        position: relative;
+        z-index: 999;
+       
+    }
+
+    h1 {
+        height: 55vh;
+        font-size: 15vh;
+        text-align: right;
+        margin-top: 15vh;
+        padding: 0;
+        margin-bottom: 0;
+        
+        // color: black;
+        // background:radial-gradient(
+        //     circle farthest-corner at center center,
+        //     white,
+        //     #111
+        //   ) no-repeat;
+        background:url(images/snow-boarders.jpg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: contrast(250%);
+        
+    }
+
+    
+
+    &#presentation {
+    //  background-color: rgba(165, 42, 42, 0.432);
+       height: 90vh;
+
+        span {
+            display: inline-block;
+            width: 7em;
+            height: 2em;
+            
+            border-radius: .5em;
+            line-height: 2em;
+            text-align: center;
+
+            background-color: #111;
+
+            position: relative;
+            left: 55vw;
+            bottom: -15vh;
+            
+
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+    } 
+
+ 
+
+
+
+
+    &#reviews {
+        .autoplay {
+          width: 90vw;
+           position: relative;
+           bottom: 10vh;
+           right: -2vw;
+           background-color: rgba(255, 255, 255, 0.63);
+        }
+
+        .review-container p {
+            text-align: center;
+            color:black;
+            
+        }
+
+        .autoplay h4 {
+            color: rgba(243, 12, 12, 0.877);
+            text-align: center;
+        }
+    }
+
+    &#apply {
+
+        .offer {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: -25vh;
+            
+            color: black;
+            
+        }
+
+       
+        .package {
+            
+            margin: 1vw;
+            text-align: center !important;
+            background-color: rgba(255, 255, 255, 0.747);
+            figure {
+                padding: 0;
+            }
+            img {
+                width: 20vw;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .package:hover {
+            background-color: #fff;
+            
+        }
+
+        .signup {
+            display: block;
+            margin-left: 40%;
+            position: relative;
+            top: -15vh;
+            width: 15em;
+            height: 2.5em;
+            background: linear-gradient(to top right, black, blue);
+            text-align: center;
+            border-radius: .5em;
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 2em;
+            }
+        }
+
+        .signup:hover {
+            
+            border: 1px solid rgba(255, 255, 255, 0.637);
+            border-radius: 2px;
+        }
+
+        #form {
+            width: 90vw;
+            height: 90vh;
+            background-color: rgba(255, 255, 255, 0.452);
+            text-align: center;
+
+            display: none;
+           
+            
+            h2 {
+                padding-top: 3em;
+                color: black;
+            }
+        }
+
+        #form:target {
+            display: block;
+            margin-top: 5vh;
+            margin-left: 2.5vw;
+            height: 100vh;
+        }
+
+        #form input, select, button {
+            width: 30vw;
+            padding: .25em;
+            margin: .5em;
+            box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+            font-size: 1.25em;
+            box-sizing: border-box;
+            border:0; // remove default border
+            border-bottom:3px solid gray; // add only bottom border
+            border-radius: 5px;
+            background-color: transparent;
+            color: black;
+            font-family: Arial;
+
+           &:hover {
+             background-color: white;
+           }
+
+           &::placeholder {
+             color: black;
+             opacity: 1;
+             font-family: Arial;
+           }
+
+        }
+
+
+        #form textarea {
+            width: 30vw;
+            padding: .25em;
+            margin: .5em;
+            box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+            font-size: 1.25em;
+            box-sizing: border-box;
+            border:0; // remove default border
+            border-bottom:3px solid gray; // add only bottom border
+            border-radius: 5px;
+            background-color: transparent;
+            color: black;
+            text-align: left;
+            font-family: Arial;
+        }
+    }
+}
+
+
+
+@media (max-width: 880px) {
+    .section h1 {
+        font-size: 13vh;
+        margin-top: 20vh;
+
+        
+    }
+
+    
+}
+
+
+
+     
+
+@media (max-width: 780px) {
+    .navbar {
+      .main {
+          display: none;
+       }
+
+       ul {
+           display: flex;
+           justify-content: space-between;
+           margin: 1em;
+       }
+
+    
+      .burger-menu {
+         display:flex;
+         
+       }
+
+       input[type=checkbox]:checked ~ ul li.main {
+            display: block;
+            background-color: #fff; 
+            position: absolute;
+            top: 50vh;
+       }
+        
+    }
+
+       
+    
+
+   
+
+    // #toggle:checked li.main {
+    //     display: block;
+        
+    //     background-color: red;
+    //     color: white;
+    // }
+   
+    &#presentation {
+        
+        span {
+            bottom:-5vh;
+        }
+    }
+
+
+   &#apply {
+        .offer {
+            display: flex;
+            flex-direction: column;
+            width: 70vw;
+            
+            left: 15vw;;
+
+            .package {
+                width: 70vw;
+
+                img {
+                    width: 55vw;
+                }
+            }
+        }
+
+        form {
+            // background-color: aquamarine; 
+            font-size: .75em;
+
+        }
+
+        
+    }
+
+    
+}
+
+
+
+
+
+
